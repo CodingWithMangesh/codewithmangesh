@@ -1,0 +1,1 @@
+export { default } from "@cwm/ui/postcss.config";

@@ -1,0 +1,13 @@
+{
+  "name": "@cwm/validators",
+  "version": "0.0.1",
+  "private": true,
+  "description": "zod validators for cwm",
+  "main": "./src/index.ts",
+  "devDependencies": {
+    "@cwm/typescript-config": "workspace:*"
+  },
+  "dependencies": {
+    "zod": "^3.25.76"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "extends": "@cwm/typescript-config/base.json"
+}
+
