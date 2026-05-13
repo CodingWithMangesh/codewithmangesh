@@ -1,16 +1,76 @@
-import Link from 'next/link';
+"use client"
 
-export default function HomePage() {
+import { motion } from "motion/react"
+
+export default function Home() {
   return (
-    <div className="flex flex-col justify-center text-center flex-1">
-      <h1 className="text-2xl font-bold mb-4">Hello World</h1>
-      <p>
-        You can open{' '}
-        <Link href="/docs" className="font-medium underline">
-          /docs
-        </Link>{' '}
-        and see the documentation.
-      </p>
+    <div className="flex flex-1 flex-col items-center justify-center bg-white dark:bg-black">
+      <main className="m-auto flex items-center justify-between bg-white sm:items-start dark:bg-black">
+        <LogoSVG />
+      </main>
     </div>
-  );
+  )
 }
+
+export const LogoSVG = () => (
+  <motion.svg
+    width="1580"
+    height="500"
+    viewBox="0 0 1580 500"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-72 text-black sm:w-96 md:w-2xl lg:w-3xl dark:text-white"
+  >
+    <motion.path
+      initial={{
+        pathLength: 0,
+        fillOpacity: 0,
+      }}
+      animate={{
+        pathLength: [0, 1],
+        fillOpacity: [0, 1],
+      }}
+      transition={{
+        duration: 2,
+        ease: [0.385, 0.513, 0.771, 0.358],
+        fillOpacity: { delay: 2, duration: 0.8 },
+      }}
+      d="M150 2H350C376.51 2 398 23.4903 398 50C398 78.7188 421.281 102 450 102C476.51 102 498 123.49 498 150C498 176.51 476.51 198 450 198C423.49 198 402 176.51 402 150C402 121.281 378.719 98 350 98H150C121.281 98 98 121.281 98 150V350C98 378.719 121.281 402 150 402H350C378.719 402 402 378.719 402 350C402 323.49 423.49 302 450 302C476.51 302 498 323.49 498 350C498 376.51 476.51 398 450 398C421.281 398 398 421.281 398 450C398 476.51 376.51 498 350 498H150C123.49 498 102 476.51 102 450C102 421.281 78.7188 398 50 398C23.4903 398 2 376.51 2 350V150C2 123.49 23.4903 102 50 102C78.7188 102 102 78.7188 102 50C102 23.4903 123.49 2 150 2Z"
+      fill="currentColor"
+      stroke="currentColor"
+      strokeWidth="4"
+    />
+    <motion.path
+      animate={{
+        pathLength: [0, 1],
+        fillOpacity: [0, 1],
+      }}
+      transition={{
+        duration: 2,
+        ease: [0.385, 0.513, 0.771, 0.358],
+        delay: 0.4,
+        fillOpacity: { delay: 2.4, duration: 2 },
+      }}
+      d="M890 2C916.51 2 938 23.4903 938 50C938 78.7188 961.281 102 990 102C1016.51 102 1038 123.49 1038 150V350C1038 376.51 1016.51 398 990 398C961.281 398 938 421.281 938 450C938 476.51 916.51 498 890 498C863.49 498 842 476.51 842 450C842 421.281 818.719 398 790 398C761.281 398 738 421.281 738 450C738 476.51 716.51 498 690 498C663.49 498 642 476.51 642 450C642 421.281 618.719 398 590 398C563.49 398 542 376.51 542 350V150C542 123.49 563.49 102 590 102C618.719 102 642 78.7188 642 50C642 23.4903 663.49 2 690 2C716.51 2 738 23.4903 738 50C738 76.5097 716.51 98 690 98C661.281 98 638 121.281 638 150V350C638 378.719 661.281 402 690 402C718.719 402 742 378.719 742 350V250C742 223.49 763.49 202 790 202C816.51 202 838 223.49 838 250V350C838 378.719 861.281 402 890 402C918.719 402 942 378.719 942 350V150C942 121.281 918.719 98 890 98C863.49 98 842 76.5097 842 50C842 23.4903 863.49 2 890 2Z"
+      fill="currentColor"
+      stroke="currentColor"
+      strokeWidth="4"
+    />
+    <motion.path
+      animate={{
+        pathLength: [0, 1],
+        fillOpacity: [0, 1],
+      }}
+      transition={{
+        duration: 2,
+        ease: [0.385, 0.513, 0.771, 0.358],
+        delay: 0.7,
+        fillOpacity: { delay: 2.6, duration: 2 },
+      }}
+      d="M1430 2C1456.51 2 1478 23.4903 1478 50C1478 78.7188 1501.28 102 1530 102C1556.51 102 1578 123.49 1578 150V350C1578 376.51 1556.51 398 1530 398C1501.28 398 1478 421.281 1478 450C1478 476.51 1456.51 498 1430 498C1403.49 498 1382 476.51 1382 450C1382 423.49 1403.49 402 1430 402C1458.72 402 1482 378.719 1482 350V150C1482 121.281 1458.72 98 1430 98C1401.28 98 1378 121.281 1378 150V250C1378 276.51 1356.51 298 1330 298C1303.49 298 1282 276.51 1282 250V150C1282 121.281 1258.72 98 1230 98C1201.28 98 1178 121.281 1178 150V350C1178 378.719 1201.28 402 1230 402C1256.51 402 1278 423.49 1278 450C1278 476.51 1256.51 498 1230 498C1203.49 498 1182 476.51 1182 450C1182 421.281 1158.72 398 1130 398C1103.49 398 1082 376.51 1082 350V150C1082 123.49 1103.49 102 1130 102C1158.72 102 1182 78.7188 1182 50C1182 23.4903 1203.49 2 1230 2C1256.51 2 1278 23.4903 1278 50C1278 78.7188 1301.28 102 1330 102C1358.72 102 1382 78.7188 1382 50C1382 23.4903 1403.49 2 1430 2Z"
+      stroke="currentColor"
+      fill="currentColor"
+      strokeWidth="4"
+    />
+  </motion.svg>
+)
