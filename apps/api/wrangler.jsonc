@@ -9,6 +9,14 @@
   "vars": {
     "ENVIRONMENT": "development"
   },
+  "env": {
+    "production": {
+      "vars": {
+        "ENVIRONMENT": "production",
+        "NODE_ENV": "production"
+      }
+    }
+  },
   "r2_buckets": [
     {
       "binding": "R2",
@@ -30,12 +38,5 @@
         "queue": "cwm-email-queue",
       }
     ]
-  }
-  // "ai": {
-  //   "binding": "AI"
-  // },
-  // "observability": {
-  //   "enabled": true,
-  //   "head_sampling_rate": 1
-  // }
+  },
 }
