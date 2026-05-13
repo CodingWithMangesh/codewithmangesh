@@ -7,7 +7,7 @@
     "nodejs_compat"
   ],
   "vars": {
-    "MY_VAR": "development"
+    "ENVIRONMENT": "development"
   },
   "r2_buckets": [
     {
