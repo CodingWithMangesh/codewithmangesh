@@ -2,8 +2,12 @@
   "extends": "@cwm/typescript-config/nextjs.json",
   "compilerOptions": {
     "paths": {
-      "@/*": ["./*"],
-      "@cwm/ui/*": ["../../packages/ui/src/*"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@cwm/ui/*": [
+        "../../packages/ui/src/*"
+      ]
     },
     "plugins": [
       {
@@ -18,5 +22,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

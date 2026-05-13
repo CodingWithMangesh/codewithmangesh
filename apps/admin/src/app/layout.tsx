@@ -1,3 +1,4 @@
+import { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 
 import "@cwm/ui/globals.css"
@@ -10,6 +11,19 @@ const fontMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
 })
+
+export const metadata: Metadata = {
+  title: "CodeWithMangesh | Admin",
+  description:
+    "Learn modern development by building real applications step by step.",
+  icons: {
+    icon: "/logo.svg",
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
+}
 
 export default function RootLayout({
   children,
