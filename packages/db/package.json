@@ -11,12 +11,13 @@
     "db:push": "drizzle-kit push"
   },
   "dependencies": {
-    "@cwm/typescript-config": "workspace:*",
     "@neondatabase/serverless": "^1.1.0",
     "dotenv": "^17.4.2",
     "drizzle-orm": "^0.45.2"
   },
   "devDependencies": {
+    "@cwm/typescript-config": "workspace:^",
+    "@types/node": "^25.7.0",
     "drizzle-kit": "^0.31.10",
     "tsx": "^4.21.0"
   }
