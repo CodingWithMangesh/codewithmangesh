@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo.svg",
   },
+  metadataBase: new URL("https://codewithmangesh.in"),
   openGraph: {
     title: "Code With Mangesh | Learn to build Real Applications",
     description:
@@ -42,6 +43,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://codewithmangesh.in",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 }
 

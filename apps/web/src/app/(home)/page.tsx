@@ -41,6 +41,10 @@ export const LogoSVG = () => (
       strokeWidth="4"
     />
     <motion.path
+      initial={{
+        pathLength: 0,
+        fillOpacity: 0,
+      }}
       animate={{
         pathLength: [0, 1],
         fillOpacity: [0, 1],
@@ -57,6 +61,10 @@ export const LogoSVG = () => (
       strokeWidth="4"
     />
     <motion.path
+      initial={{
+        pathLength: 0,
+        fillOpacity: 0,
+      }}
       animate={{
         pathLength: [0, 1],
         fillOpacity: [0, 1],
