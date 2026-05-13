@@ -34,7 +34,8 @@
     },
     "db:studio": {
       "cache": false,
-      "persistent": false
+      "persistent": true
+    }
     }
   }
 }
