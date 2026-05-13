@@ -21,7 +21,7 @@
     {
       "binding": "R2",
       "bucket_name": "cwm-files",
-      "preview_bucket_name": "cwm-files-preview",
+      "preview_bucket_name": "cwm-files-preview"
     }
   ],
   "queues": {
@@ -35,7 +35,7 @@
     "producers": [
       {
         "binding": "EMAIL_QUEUE",
-        "queue": "cwm-email-queue",
+        "queue": "cwm-email-queue"
       }
     ]
   },
