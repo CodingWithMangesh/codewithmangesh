@@ -12,7 +12,7 @@ export const purchases = pgTable('purchases', {
   couponDiscount: integer('coupon_discount').notNull().default(0),
   amountPaid: integer('amount_paid').notNull(),
   currency: text('currency').notNull().default('INR'),
-  paymentId: text('transaction_id'),
+  paymentId: text('payment_id'),
   couponId: uuid('coupon_id'),
   status: purchaseStatusEnum('status').default('pending').notNull(),
   createdAt: timestamp('created_at').defaultNow().notNull(),
