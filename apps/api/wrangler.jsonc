@@ -6,8 +6,8 @@
   "compatibility_flags": [
     "nodejs_compat"
   ],
-  "vars": {
-    "ENVIRONMENT": "development"
+  "placement": {
+    "mode": "smart"
   },
   "env": {
     "production": {
@@ -15,6 +15,15 @@
         "ENVIRONMENT": "production",
         "NODE_ENV": "production"
       }
+    }
+  },
+  "vars": {
+    "ENVIRONMENT": "development"
+  },
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "invocation_logs": true
     }
   },
   "r2_buckets": [
@@ -29,7 +38,8 @@
       {
         "queue": "cwm-email-queue",
         "max_batch_size": 10,
-        "max_batch_timeout": 30
+        "max_batch_timeout": 30,
+        "dead_letter_queue": "cwm-email-queue-dlq"
       }
     ],
     "producers": [
@@ -38,5 +48,5 @@
         "queue": "cwm-email-queue"
       }
     ]
-  },
+  }
 }
