@@ -22,7 +22,7 @@ export const docPages = pgTable('doc_pages', {
     .references(() => docSeries.id, { onDelete: 'cascade' }),
   title: text('title').notNull(),
   slug: text('slug').unique().notNull(),
-  videoId: uuid('video_id').references(() => youtubeVideos.id, { onDelete: 'set null' }),
+  videoId: uuid('video_id').references(() => youtubeVideos.id, { onDelete: 'cascade' }),
   order: integer('order').notNull().default(0),
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
