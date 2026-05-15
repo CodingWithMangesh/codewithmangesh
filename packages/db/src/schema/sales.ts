@@ -3,7 +3,6 @@ import { boolean, check, index, integer, pgTable, text, timestamp, unique, uuid 
 
 import { products } from './products'
 import { applicableToEnum, discountTypeEnum } from './enums'
-import { table } from 'node:console'
 
 export const sales = pgTable('sales', {
   id: uuid('id').primaryKey().defaultRandom(),
