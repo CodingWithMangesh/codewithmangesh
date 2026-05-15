@@ -16,22 +16,20 @@ export const sales = pgTable('sales', {
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
 }, (table) => [
-  [
-    index('sale_active_idx').on(table.isActive),
-    index('sale_dates_idx').on(table.startsAt, table.endsAt),
-    check(
-      'sale_discount_positive',
-      sql`discount_value > 0`
-    ),
-    check(
-      'sale_percentage_max',
-      sql`(discount_type != 'percentage') OR (discount_value <= 100)`
-    ),
-    check(
-      'sale_date_range',
-      sql`ends_at > starts_at`
-    ),
-  ]
+  index('sale_active_idx').on(table.isActive),
+  index('sale_dates_idx').on(table.startsAt, table.endsAt),
+  check(
+    'sale_discount_positive',
+    sql`discount_value > 0`
+  ),
+  check(
+    'sale_percentage_max',
+    sql`(discount_type != 'percentage') OR (discount_value <= 100)`
+  ),
+  check(
+    'sale_date_range',
+    sql`ends_at > starts_at`
+  ),
 ])
 
 export const saleProducts = pgTable('sale_products', {
