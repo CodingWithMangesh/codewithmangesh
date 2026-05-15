@@ -7,7 +7,14 @@
     "cf-typegen": "wrangler types --env-interface CloudflareBindings"
   },
   "dependencies": {
-    "hono": "^4.12.18"
+    "@better-auth/drizzle-adapter": "^1.6.11",
+    "@dodopayments/better-auth": "^1.6.2",
+    "@dub/better-auth": "^0.0.6",
+    "better-auth": "^1.6.11",
+    "dodopayments": "^2.31.2",
+    "dub": "^0.71.7",
+    "hono": "^4.12.18",
+    "resend": "^6.12.3"
   },
   "devDependencies": {
     "wrangler": "^4.4.0"

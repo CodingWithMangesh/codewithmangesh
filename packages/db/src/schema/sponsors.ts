@@ -1,4 +1,4 @@
-import { integer, pgTable, text, timestamp, uuid } from 'drizzle-orm/pg-core'
+import { index, integer, pgTable, text, timestamp, unique, uuid } from 'drizzle-orm/pg-core'
 
 import { youtubeVideos } from './videos'
 
@@ -10,7 +10,9 @@ export const sponsors = pgTable('sponsors', {
   websiteUrl: text('website_url').notNull(),
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
-})
+}, (table) => [
+  index('sponsor_name_idx').on(table.name)
+])
 
 
 export const videoSponsors = pgTable('video_sponsors', {
@@ -19,7 +21,11 @@ export const videoSponsors = pgTable('video_sponsors', {
   videoId: uuid('video_id').notNull().references(() => youtubeVideos.id, { onDelete: 'cascade' }),
   position: integer('position').notNull().default(0),
   createdAt: timestamp('created_at').defaultNow().notNull(),
-})
+}, (table) => [
+  unique('video_sponsor_unique').on(table.sponsorId, table.videoId),
+  index('video_sponsor_video_idx').on(table.sponsorId),
+  index('video_sponsor_sponsor_idx').on(table.videoId)
+])
 
 export type Sponsor = typeof sponsors.$inferSelect
 export type NewSponsor = typeof sponsors.$inferInsert
