@@ -1,4 +1,18 @@
-# Logs
+# astro
+.astro/
+
+# hono
+.wrangler/
+
+# next.js
+.next/
+out/
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# logs
 logs
 *.log
 npm-debug.log*
@@ -7,9 +21,14 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# dependencies
+node_modules/
+
+# build output
+dist/
+dist-ssr/
+
+# local files
 *.local
 
 # dotenv environment variable files
@@ -17,20 +36,33 @@ dist-ssr
 .env.*
 !.env.example
 
-# Editor directories and files
+# editor directories and files
 .vscode/*
+!.vscode/launch.json
+!.vscode/*.code-snippets
 !.vscode/settings.json
 !.vscode/extensions.json
+
 .idea
-.DS_Store
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/shelf
+
+# visual Studio
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-# AI agent worktrees
+# ai agent worktrees
 .claude/worktrees/
-!.vscode/
-!.vscode/settings.json
-!.vscode/extensions.json
+
+# vercel
+.vercel/
+
+# certificates
+*.pem
+
+# misc
+.DS_Store
