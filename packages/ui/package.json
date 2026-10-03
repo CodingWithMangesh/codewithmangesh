@@ -13,6 +13,9 @@
     "test": "vp test",
     "check": "vp check"
   },
+  "dependencies": {
+    "@base-ui/react": "catalog:"
+  },
   "devDependencies": {
     "@pandacss/dev": "catalog:",
     "@pandacss/preset-base": "catalog:",
