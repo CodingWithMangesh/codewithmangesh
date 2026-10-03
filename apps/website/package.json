@@ -1,16 +1,24 @@
 {
-  "name": "website",
-  "version": "0.0.0",
-  "private": true,
+  "name": "@cwm/website",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vp dev",
-    "build": "tsc && vp build",
-    "preview": "vp preview"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "catalog:",
+    "astro": "^7.3.5",
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "devDependencies": {
-    "typescript": "^7.0.2",
-    "vite": "catalog:",
-    "vite-plus": "catalog:"
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }
