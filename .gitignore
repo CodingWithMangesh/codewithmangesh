@@ -8,6 +8,9 @@
 .next/
 out/
 
+# Panda
+styled-system
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

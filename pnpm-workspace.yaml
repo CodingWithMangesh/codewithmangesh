@@ -7,9 +7,13 @@ catalogMode: prefer
 
 catalog:
   "@astrojs/react": ^7.0.0
+  "@pandacss/dev": ^2.1.0
+  "@pandacss/preset-base": 2.1.0
+  "@pandacss/preset-panda": 2.1.0
   "@types/node": ^24
   "@types/react": ^19.3.0
   "@types/react-dom": ^19.3.0
+  postcss: ^8.5.28
   react: ^19.3.0
   react-dom: ^19.3.0
   typescript: ^7.0.2
@@ -23,5 +27,6 @@ peerDependencyRules:
   allowedVersions:
     vite: "*"
 allowBuilds:
+  "@parcel/watcher": true
   esbuild: true
   workerd: true
