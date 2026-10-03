@@ -21,6 +21,8 @@
     "@pandacss/preset-base": "catalog:",
     "@pandacss/preset-panda": "catalog:",
     "@types/node": "^26.1.1",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
     "postcss": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
