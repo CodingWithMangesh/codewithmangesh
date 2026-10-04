@@ -13,6 +13,7 @@ catalog:
   "@pandacss/dev": ^2.1.0
   "@pandacss/preset-base": 2.1.0
   "@pandacss/preset-panda": 2.1.0
+  "@pandacss/vite": ^2.1.1
   "@types/node": ^24
   "@types/react": ^19.3.0
   "@types/react-dom": ^19.3.0

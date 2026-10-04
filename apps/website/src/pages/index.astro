@@ -1,5 +1,6 @@
 ---
-
+import { css } from '../../styled-system/css';
+import '../styles/index.css'
 ---
 
 <html lang="en">
@@ -13,5 +14,6 @@
 	</head>
 	<body>
 		<h1>Astro</h1>
+		<div class={css({ fontSize: '8xl', fontWeight: 'bold' })}>Hello 🐼!</div>
 	</body>
 </html>
