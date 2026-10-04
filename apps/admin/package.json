@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "prepare": "panda codegen",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -14,6 +15,9 @@
     "react-dom": "19.2.8"
   },
   "devDependencies": {
+    "@pandacss/dev": "catalog:",
+    "@pandacss/preset-base": "catalog:",
+    "@pandacss/preset-panda": "catalog:",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
