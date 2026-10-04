@@ -1,4 +1,4 @@
-import { Icon } from "../../index";
+import { Icon } from "../icon";
 
 import { LoaderCircleFreeIcons } from "@hugeicons/core-free-icons";
 import { css, cx } from "../../../styled-system/css";
