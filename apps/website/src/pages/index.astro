@@ -1,0 +1,23 @@
+---
+import { css } from '../../styled-system/css';
+import '../styles/index.css'
+import {Button, buttonVariants} from "@cwm/ui"
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1>Astro</h1>
+		<div class={css({ fontSize: '8xl', fontWeight: 'bold' })}>Hello 🐼!</div>
+		<Button variant='solid'>Solid</Button>
+		<Button variant='outline'>Outline</Button>
+		<a href="http://google.com" target="_blank" rel="noopener noreferrer" class={buttonVariants({ variant: 'solid' })}>Google</a>
+	</body>
+</html>
